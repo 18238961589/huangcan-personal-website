@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f1">
+  <meta name="description" content="黄灿的个人主页：个人介绍、实验室兴趣、学习与作品，以及公开留言板。">
+  <title>黄灿｜个人主页</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="黄灿个人主页首页"><span class="brand-mark">HC</span><span>黄灿 <small>PERSONAL SPACE</small></span></a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="#about">关于我</a><a href="#lab">实验室兴趣</a><a href="#resolve">我的决心</a><a href="#work">经历与作品</a><a href="#guestbook">留言板</a><a href="#contact">联系我</a>
+      </nav>
+      <button class="icon-button" id="admin-open" type="button" aria-label="管理员入口" title="管理员入口">↗</button>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> A STUDENT · A LEARNER · A BUILDER</p>
+          <h1>你好，我是<br><em id="hero-name">黄灿</em><span class="hero-period">.</span></h1>
+          <p class="hero-lead" id="hero-tagline">带着好奇心走近科研，用行动回应每一次机会。</p>
+          <p class="hero-desc" id="hero-intro">这里是我的个人空间。我希望通过持续学习、动手实践和真诚交流，让你更了解我。</p>
+          <div class="hero-actions"><a class="button button-dark" href="#about">认识我 <span>↘</span></a><a class="text-link" href="#guestbook">给我留言 <span>↗</span></a></div>
+          <div class="hero-meta"><span class="meta-line"></span><span id="hero-meta">保持好奇，认真行动，持续成长。</span></div>
+        </div>
+        <div class="hero-art">
+          <div class="art-grid"></div>
+          <div class="portrait-frame">
+            <div class="portrait-placeholder" id="hero-avatar-placeholder"><span>HC</span><small>YOUR PORTRAIT</small></div>
+            <img id="hero-avatar" class="portrait-img hidden" alt="黄灿的头像">
+            <div class="portrait-caption"><span>个人主页</span><span>2026 — ∞</span></div>
+          </div>
+          <div class="floating-note note-top"><span class="note-symbol">✳</span><span>Curiosity<br><b>好奇心</b></span></div>
+          <div class="floating-note note-bottom"><span class="note-number">01</span><span>Learn by doing<br><b>在实践中学习</b></span></div>
+          <div class="art-circle"></div>
+        </div>
+      </section>
+
+      <section class="intro-strip"><p>我相信，<strong>真诚的兴趣</strong>应该被认真对待，<strong>坚定的目标</strong>应该被具体行动支撑。</p><span>SCROLL TO EXPLORE ↓</span></section>
+
+      <section class="section content-section" id="about">
+        <div class="section-heading"><p class="eyebrow">01 / ABOUT ME</p><h2>关于我<span class="heading-dot">.</span></h2><p class="section-subtitle">不止于标签，也包括我如何思考、学习和面对问题。</p></div>
+        <div class="about-layout">
+          <div class="about-index"><span class="index-big">01</span><span class="index-caption">A LITTLE<br>ABOUT ME</span><span class="vertical-rule"></span></div>
+          <div class="about-main"><h3 id="about-title">一个愿意认真学习、主动探索的人。</h3><p id="about-text">我愿意从基础开始，把不懂的问题拆解清楚，再通过练习和验证逐步掌握。我也相信，遇到困难时持续尝试、及时复盘，比只停留在想法里更重要。</p>
+            <div class="personality-card"><div class="personality-icon">✦</div><div><p class="card-kicker">MY PERSONALITY / 我的性格</p><h4 id="personality-title">真诚、好奇、愿意行动</h4><p id="personality-text">我对新事物保持好奇，愿意听取建议，也愿意承认自己的不足。面对陌生任务，我希望先理解目标，再拆分步骤、动手尝试，并根据结果继续改进。</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lab-section" id="lab">
+        <div class="section lab-inner">
+          <div class="section-heading light-heading"><p class="eyebrow">02 / WHY LAB</p><h2>我为什么向往实验室<span class="heading-dot">.</span></h2><p class="section-subtitle">把兴趣变成问题，把问题变成行动。</p></div>
+          <div class="lab-grid">
+            <div class="lab-quote"><span class="quote-mark">“</span><h3 id="lab-title">我向往的不只是一个机会，更是一个能持续探索、认真做事的环境。</h3><p id="lab-text">我希望有机会接触真实的研究问题，学习规范的方法，参与团队协作，并在一次次实践中提升自己的能力。</p></div>
+            <div class="lab-points">
+              <article><span class="point-no">A</span><div><h4 id="lab-point1-title">对未知保持兴趣</h4><p id="lab-point1-text">我想知道问题为什么发生、有哪些可能的解释，以及怎样通过实验或数据去验证。</p></div></article>
+              <article><span class="point-no">B</span><div><h4 id="lab-point2-title">尊重过程与证据</h4><p id="lab-point2-text">我愿意学习记录、复现、检查和复盘，不只追求结果，也重视得出结果的过程。</p></div></article>
+              <article><span class="point-no">C</span><div><h4 id="lab-point3-title">在团队中成长</h4><p id="lab-point3-text">我期待向老师和学长学姐学习，也希望在完成分配任务的过程中，逐渐承担更多责任。</p></div></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section content-section resolve-section" id="resolve">
+        <div class="section-heading"><p class="eyebrow">03 / MY COMMITMENT</p><h2>我的决心<span class="heading-dot">.</span></h2><p class="section-subtitle">决心不只是表达，更要落实到每天的行动中。</p></div>
+        <div class="resolve-card"><div class="resolve-left"><span class="resolve-star">✳</span><p class="card-kicker">WHAT I AM READY TO DO</p><h3 id="resolve-title">从小事做起，用行动证明自己。</h3></div><div class="resolve-right"><p id="resolve-text">如果有机会加入实验室，我会认真对待每一项任务：不懂就主动查资料、及时请教；做完后核对结果、记录过程；出现问题时不回避，尽力定位原因并总结经验。我知道自己还有很多需要学习的地方，也愿意用持续投入来缩短差距。</p><ul class="commitment-list" id="commitment-list"><li><span>01</span>保持稳定学习与实践</li><li><span>02</span>认真记录、验证和复盘</li><li><span>03</span>主动沟通，按时完成任务</li></ul></div></div>
+      </section>
+
+      <section class="section content-section work-section" id="work">
+        <div class="section-heading"><p class="eyebrow">04 / EXPERIENCE & WORK</p><h2>经历与作品<span class="heading-dot">.</span></h2><p class="section-subtitle">用具体经历记录成长，也让努力有迹可循。</p></div>
+        <div class="work-intro"><p id="work-intro">这里会逐步整理我的学习经历、实践项目、作品和阶段性成果。与其夸大自己，不如清楚记录做过什么、遇到什么问题，以及从中学到了什么。</p><span class="work-count" id="work-count">01 — KEEP BUILDING</span></div>
+        <div class="project-grid" id="project-grid"></div>
+      </section>
+
+      <section class="guestbook-section" id="guestbook">
+        <div class="section guestbook-inner">
+          <div class="section-heading"><p class="eyebrow">05 / GUESTBOOK</p><h2>留下一句话<span class="heading-dot">.</span></h2><p class="section-subtitle">欢迎交流、建议，也欢迎分享你的想法。无需注册即可留言。</p></div>
+          <div class="guestbook-layout">
+            <form class="message-form" id="message-form">
+              <p class="form-heading">写下你的留言 <span>✳</span></p>
+              <label for="guest-name">怎么称呼你？</label><input id="guest-name" name="name" maxlength="50" placeholder="你的昵称" required>
+              <label for="guest-message">你想说些什么？</label><textarea id="guest-message" name="message" rows="5" maxlength="1500" placeholder="欢迎留下建议、鼓励或想交流的问题……" required></textarea>
+              <p class="form-note">留言提交后会进入审核，审核通过后公开显示。请勿填写手机号、住址等敏感个人信息。</p>
+              <button class="button button-dark button-full" type="submit">提交留言 <span>↗</span></button>
+              <p class="form-status" id="message-status" role="status"></p>
+            </form>
+            <div class="messages-panel"><div class="messages-header"><div><p class="card-kicker">COMMUNITY NOTES</p><h3>大家的留言</h3></div><span class="public-badge"><i></i> PUBLIC</span></div><div id="messages-list" class="messages-list"><div class="empty-state">留言正在加载……</div></div><button id="load-more" class="text-link load-more hidden" type="button">加载更多留言 ↓</button></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="contact-card"><div><p class="eyebrow">06 / SAY HELLO</p><h2 id="contact-title">期待与你交流。</h2><p id="contact-text">如果你对我的经历、学习方向或项目感兴趣，欢迎通过下面的方式联系我。</p></div><div class="contact-details"><p><span>EMAIL</span><a id="contact-email" href="mailto:hello@example.com">hello@example.com</a></p><p><span>OTHER</span><a id="contact-other" href="#guestbook">也可以在留言板联系我 ↗</a></p></div></div>
+      </section>
+    </main>
+    <footer class="footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">HC</span><span>黄灿 <small>PERSONAL SPACE</small></span></a><p id="footer-note">认真学习，持续实践，保持真诚。</p><span>© <span id="year"></span> HUANG CAN</span></footer>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <div class="modal-backdrop hidden" id="admin-modal" role="dialog" aria-modal="true" aria-labelledby="admin-modal-title">
+    <div class="admin-modal">
+      <button class="modal-close" id="admin-close" type="button" aria-label="关闭">×</button>
+      <div id="login-panel"><p class="eyebrow">PRIVATE AREA</p><h2 id="admin-modal-title">管理员登录</h2><p class="muted">仅网站管理员可以编辑个人介绍、审核留言和上传头像。</p>
+        <form id="login-form"><label for="admin-email">管理员邮箱</label><input id="admin-email" type="email" autocomplete="username" required placeholder="你的管理员邮箱"><label for="admin-password">密码</label><input id="admin-password" type="password" autocomplete="current-password" required placeholder="管理员密码"><button class="button button-dark button-full" type="submit">登录管理后台</button><p class="form-status" id="login-status" role="status"></p></form>
+      </div>
+      <div id="admin-panel" class="hidden">
+        <p class="eyebrow">SITE MANAGEMENT</p><h2>网站管理</h2><p class="muted">保存后，访客刷新页面即可看到更新。</p>
+        <div class="admin-tabs"><button class="admin-tab active" data-tab="edit" type="button">编辑主页</button><button class="admin-tab" data-tab="moderate" type="button">留言审核</button></div>
+        <div id="admin-edit-tab">
+          <form id="content-form" class="admin-form">
+            <label>主标题下的短句<input name="tagline" maxlength="180"></label>
+            <label>首页介绍<textarea name="intro" rows="3" maxlength="1200"></textarea></label>
+            <label>首页底部短句<input name="hero_meta" maxlength="180"></label>
+            <label>关于我：标题<input name="about_title" maxlength="180"></label>
+            <label>关于我：正文<textarea name="about_text" rows="4" maxlength="1800"></textarea></label>
+            <label>性格模块：标题<input name="personality_title" maxlength="180"></label>
+            <label>性格模块：正文<textarea name="personality_text" rows="4" maxlength="1200"></textarea></label>
+            <label>实验室兴趣：主标题<textarea name="lab_title" rows="2" maxlength="400"></textarea></label>
+            <label>实验室兴趣：正文<textarea name="lab_text" rows="4" maxlength="1600"></textarea></label>
+            <label>兴趣要点 A：标题<input name="lab_point1_title" maxlength="120"></label><label>兴趣要点 A：正文<textarea name="lab_point1_text" rows="2" maxlength="600"></textarea></label>
+            <label>兴趣要点 B：标题<input name="lab_point2_title" maxlength="120"></label><label>兴趣要点 B：正文<textarea name="lab_point2_text" rows="2" maxlength="600"></textarea></label>
+            <label>兴趣要点 C：标题<input name="lab_point3_title" maxlength="120"></label><label>兴趣要点 C：正文<textarea name="lab_point3_text" rows="2" maxlength="600"></textarea></label>
+            <label>决心模块：标题<input name="resolve_title" maxlength="180"></label><label>决心模块：正文<textarea name="resolve_text" rows="4" maxlength="1800"></textarea></label>
+            <label>决心行动清单（每行一项）<textarea name="commitments" rows="3" maxlength="700"></textarea></label>
+            <label>经历与作品介绍<textarea name="work_intro" rows="3" maxlength="1000"></textarea></label>
+            <label>作品列表（每行一项，格式：标题 | 说明 | 时间）<textarea name="projects" rows="5" maxlength="2500"></textarea></label>
+            <label>联系模块标题<input name="contact_title" maxlength="180"></label><label>联系模块说明<textarea name="contact_text" rows="2" maxlength="800"></textarea></label>
+            <label>公开联系邮箱<input name="contact_email" type="email" maxlength="254"></label><label>其他联系方式文字<input name="contact_other" maxlength="180"></label><label>其他联系方式网址（可留空）<input name="contact_url" type="url" maxlength="500" placeholder="https://..."></label>
+            <label>页脚短句<input name="footer_note" maxlength="180"></label>
+            <div class="avatar-upload"><label for="avatar-file">上传头像（JPG、PNG、WebP，最大 3 MB）</label><input id="avatar-file" type="file" accept="image/jpeg,image/png,image/webp"><button class="button button-outline" id="avatar-upload" type="button">上传并应用头像</button><p class="form-note">请使用自己有权公开的照片。上传后头像会公开展示。</p></div>
+            <button class="button button-dark button-full" type="submit">保存所有主页内容</button><p class="form-status" id="content-status" role="status"></p>
+          </form>
+        </div>
+        <div id="admin-moderate-tab" class="hidden"><p class="form-note">待审核留言不会显示给普通访客。你可以批准公开或删除留言。删除父留言也会删除其回复。</p><div id="moderation-list" class="moderation-list"></div></div>
+        <button class="button button-outline button-full logout-button" id="logout-button" type="button">退出登录</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
